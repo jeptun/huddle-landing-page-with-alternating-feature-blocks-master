@@ -1,0 +1,11 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+
+.landing {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.landing-hero-title{
+    font-size: u.rem(32);
+}

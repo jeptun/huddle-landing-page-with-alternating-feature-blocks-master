@@ -1,0 +1,24 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+@use "../mixin/" as m;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-figure {
+  width: u.rem(200);
+}
+.header-logo {
+  width: 100%;
+}
+.btn-header {
+  border-radius: u.rem(50);
+  font-family: g.$font-poppins;
+  background-color: hsl(var(--white));
+  padding: u.rem(15) u.rem(60);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-weight: 700;
+  @include m.button-bg(hsl(0, 0%, 100%));
+}
