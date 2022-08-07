@@ -6,7 +6,7 @@
   @if math.is-unitless($pixel) {
     @return math.div($pixel, 16) + rem;
   } @else {
-    @error 'Nepouživej jednotky-->'  $pixel;
+    @error 'Do not use px units and other-->'  $pixel;
   }
 }
 
@@ -16,6 +16,6 @@
     @if math.is-unitless($pixel) {
       @return math.div($pixel, 16) + em;
     } @else {
-      @error 'Nepouživej jednotky-->'  $pixel;
+      @error 'Do not use px units and other-->'  $pixel;
     }
   }

@@ -1,0 +1,38 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+@use "../mixin/" as m;
+
+.community-container {
+  display: grid;
+}
+.community-card {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: u.rem(16);
+  padding: u.rem(25) u.rem(50);
+  position: relative;
+  top: u.rem(60);
+  background-color: white;
+  text-align: center;
+
+  @include u.breakpoint-up(tiny) {
+    padding: u.rem(45) u.rem(30);
+  }
+  @include u.breakpoint-up(smallest) {
+    padding: u.rem(50) u.rem(60);
+  }
+
+  @include u.breakpoint-up(small) {
+    padding: u.rem(50) u.rem(100);
+  }
+}
+.community-card-title {
+  font-size: u.rem(18);
+
+  @include u.breakpoint-up(small) {
+    font-size: u.rem(22);
+  }
+}

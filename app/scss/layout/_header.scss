@@ -3,22 +3,27 @@
 @use "../mixin/" as m;
 
 .header {
+  padding-top: u.rem(42);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header-figure {
-  width: u.rem(200);
+  width: u.rem(100);
+
+  @include u.breakpoint-up(small) {
+    width: u.rem(200);
+  }
 }
 .header-logo {
   width: 100%;
 }
 .btn-header {
-  border-radius: u.rem(50);
-  font-family: g.$font-poppins;
-  background-color: hsl(var(--white));
-  padding: u.rem(15) u.rem(60);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  font-weight: 700;
+  padding: u.rem(15) u.rem(30);
+  font-family: g.$ff-poppins;
   @include m.button-bg(hsl(0, 0%, 100%));
+  @include u.breakpoint-up(small) {
+    padding: u.rem(15) u.rem(60);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
 }

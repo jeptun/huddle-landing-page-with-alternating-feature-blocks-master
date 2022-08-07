@@ -1,0 +1,40 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+@use "../mixin/" as m;
+
+.card {
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: u.rem(16);
+  padding: u.rem(20);
+  gap: u.rem(60);
+  text-align: center;
+
+  @include u.breakpoint-up(small) {
+    padding: u.rem(50) u.rem(20) u.rem(50) u.rem(100);
+    text-align: left;
+  }
+}
+:where(.cards-wrapper .card:not(:last-child)) {
+  margin-bottom: u.rem(50);
+}
+.card-title {
+  color: hsl(var(--very-dark-cyan));
+  font-size: u.rem(20);
+  
+  @include u.breakpoint-up(small) {
+    font-size: u.rem(28);
+  }
+}
+.card-dense {
+ 
+   @include u.breakpoint-up(small) {
+    order: 1;
+  }
+}
+.card-description {
+  color: hsl(var(--grayish-blue));
+  font-family: g.$ff-openSans;
+  font-weight: g.$fw-regular;
+  font-size: u.rem(17);
+}

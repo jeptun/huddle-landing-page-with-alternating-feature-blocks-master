@@ -1,0 +1,27 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+@use "../mixin/" as m;
+
+.hero-wrapper {
+  text-align: center;
+  padding-bottom: u.rem(50);
+  @include u.breakpoint-up(small) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+.hero-title {
+  font-size: u.rem(30);
+  font-weight: 700;
+  @include u.breakpoint-up(small) {
+    font-size: u.rem(38);
+  }
+}
+
+.btn[data-type="inverted"] {
+  font-family: g.$ff-poppins;
+  padding: u.rem(15) u.rem(60);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: hsl(var(--white));
+  @include m.button-bg((hsl(322, 100%, 66%)));
+}
